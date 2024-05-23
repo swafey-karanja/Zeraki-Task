@@ -1,0 +1,131 @@
+<!-- dashboard.component.html -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>ZerakiTask</title>
+  <base href="/Dashboard">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body >
+
+    <div class="header-container">
+      <h1 class="header">Dashboard</h1>
+    </div>
+
+    <div class="dashboard-container">
+      <div class="counter-card">
+        <h2>Collections</h2>
+        <p>{{ collections }}</p>
+      </div>
+
+      <div class="counter-card">
+        <h2>Sign-ups</h2>
+        <p>Total Sign-ups: {{ signups.analytics }}</p>
+      </div>
+
+      <div class="counter-card">
+        <h2>Revenue</h2>
+        <p>Total Revenue: {{ totalRevenue.analytics | currency }}</p>
+      </div>
+
+      <div class="counter-card">
+        <h2>Bounced Cheques</h2>
+        <p>{{ bouncedCheques }}</p>
+      </div>
+    </div>
+
+    <div class="analytics-details">
+
+      <div class="targets-visualization">
+        <h2 class="title">Targets Visualization</h2>
+        <img class="piechart" src="assets\nicepic.jpg" alt="">
+      </div>
+
+      <div class="signups-overview">
+        <h2 class="title">Signups Overview</h2>
+        <img class="piechart" src="assets\bar graph.jpg" alt="">
+      </div>
+
+      <div class="upcoming-invoices">
+        <h2 class="title">Upcoming Invoices</h2>
+        <img class="piechart" src="assets\data analytics.jpg" alt="">
+      </div>
+    </div>
+
+    <div class="footer-container">
+      <h4 class="footer">Zeraki Analytics</h4>
+    </div>
+</body>
+</html>
+<!-- <div class="chart-container">
+  <div class="chart-card">
+    <h3>Analytics Target</h3>
+    <canvas>
+      Pie chart for Zeraki Analytics
+    </canvas>
+  </div>
+
+  <div class="chart-card">
+    <h3>Finance Target</h3>
+    <canvas>
+      Pie chart for Zeraki Finance
+    </canvas>
+  </div>
+
+  <div class="chart-card">
+    <h3>Timetable Target</h3>
+    <canvas>
+      Pie chart for Zeraki Timetable
+    </canvas>
+  </div>
+</div>
+
+<div class="chart-container">
+  <div class="chart-card">
+    <h3>Analytics Sign-ups</h3>
+    <canvas>
+      Bar chart for Zeraki Analytics sign-ups
+    </canvas>
+  </div>
+
+  <div class="chart-card">
+    <h3>Finance Sign-ups</h3>
+    <canvas>
+      Bar chart for Zeraki Finance sign-ups
+    </canvas>
+  </div>
+
+  <div class="chart-card">
+    <h3>Timetable Sign-ups</h3>
+    <canvas>
+      Bar chart for Zeraki Timetable sign-ups
+    </canvas>
+  </div>
+</div> -->
+
+<!-- <div class="upcoming-invoices">
+  <h3>Upcoming Invoices</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>School</th>
+        <th>Amount</th>
+        <th>Due Date</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let invoice of upcomingInvoices">
+        <td>{{ invoice.school }}</td>
+        <td>{{ invoice.amount | currency }}</td>
+        <td>{{ invoice.dueDate | date }}</td>
+        <td>
+          <button>Collect Payment</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div> -->

@@ -1,0 +1,12 @@
+/* timetable-visual.component.css */
+.chart-container {
+  display: flex;
+  justify-content: flex-end;
+  height: 100vh; /* Set the height to 100% of the viewport height */
+  width: 30vw ;
+}
+
+#MyChart {
+  max-width: 30vw; /* Set the maximum width to 50% of the viewport width */
+  max-height: 80vh; /* Set the maximum height to 80% of the viewport height */
+}
