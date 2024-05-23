@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TimetableVisualComponent } from './timetable-visual.component';
+import { SchoolDetailsComponent } from './school-details.component';
 
-describe('TimetableVisualComponent', () => {
-  let component: TimetableVisualComponent;
-  let fixture: ComponentFixture<TimetableVisualComponent>;
+describe('SchoolDetailsComponent', () => {
+  let component: SchoolDetailsComponent;
+  let fixture: ComponentFixture<SchoolDetailsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [TimetableVisualComponent]
+      declarations: [SchoolDetailsComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(TimetableVisualComponent);
+    fixture = TestBed.createComponent(SchoolDetailsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

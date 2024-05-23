@@ -40,19 +40,29 @@
     <div class="analytics-details">
 
       <div class="targets-visualization">
-        <h2 class="title">Targets Visualization</h2>
+        <a routerLink="/targets-visualization">
+          <h2 class="title">Targets Visualization</h2>
+        </a>
         <img class="piechart" src="assets\nicepic.jpg" alt="">
       </div>
 
       <div class="signups-overview">
-        <h2 class="title">Signups Overview</h2>
+        <a routerLink="/signups-overview">
+          <h2 class="title">Signups Overview</h2>
+        </a>
         <img class="piechart" src="assets\bar graph.jpg" alt="">
       </div>
 
-      <div class="upcoming-invoices">
-        <h2 class="title">Upcoming Invoices</h2>
-        <img class="piechart" src="assets\data analytics.jpg" alt="">
-      </div>
+
+        <div class="upcoming-invoices">
+          <a routerLink="/upcoming-invoices" >
+            <h2 class="title">Upcoming Invoices</h2>
+          </a>
+          <img class="piechart" src="assets\data analytics.jpg" alt="">
+        </div>
+
+
+
     </div>
 
     <div class="footer-container">
@@ -60,72 +70,5 @@
     </div>
 </body>
 </html>
-<!-- <div class="chart-container">
-  <div class="chart-card">
-    <h3>Analytics Target</h3>
-    <canvas>
-      Pie chart for Zeraki Analytics
-    </canvas>
-  </div>
 
-  <div class="chart-card">
-    <h3>Finance Target</h3>
-    <canvas>
-      Pie chart for Zeraki Finance
-    </canvas>
-  </div>
 
-  <div class="chart-card">
-    <h3>Timetable Target</h3>
-    <canvas>
-      Pie chart for Zeraki Timetable
-    </canvas>
-  </div>
-</div>
-
-<div class="chart-container">
-  <div class="chart-card">
-    <h3>Analytics Sign-ups</h3>
-    <canvas>
-      Bar chart for Zeraki Analytics sign-ups
-    </canvas>
-  </div>
-
-  <div class="chart-card">
-    <h3>Finance Sign-ups</h3>
-    <canvas>
-      Bar chart for Zeraki Finance sign-ups
-    </canvas>
-  </div>
-
-  <div class="chart-card">
-    <h3>Timetable Sign-ups</h3>
-    <canvas>
-      Bar chart for Zeraki Timetable sign-ups
-    </canvas>
-  </div>
-</div> -->
-
-<!-- <div class="upcoming-invoices">
-  <h3>Upcoming Invoices</h3>
-  <table>
-    <thead>
-      <tr>
-        <th>School</th>
-        <th>Amount</th>
-        <th>Due Date</th>
-        <th>Actions</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let invoice of upcomingInvoices">
-        <td>{{ invoice.school }}</td>
-        <td>{{ invoice.amount | currency }}</td>
-        <td>{{ invoice.dueDate | date }}</td>
-        <td>
-          <button>Collect Payment</button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div> -->

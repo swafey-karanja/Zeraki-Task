@@ -1,0 +1,58 @@
+.charts-row {
+  display: flex; /* Use flexbox for horizontal arrangement */
+}
+
+.chart {
+  flex: 1; /* Each chart takes equal space */
+  margin-right: 20px; /* Add some space between the charts */
+}
+
+/* For smaller screens, stack charts vertically */
+@media (max-width: 768px) {
+  .charts-row {
+    flex-direction: column; /* Change to vertical direction */
+  }
+
+  .chart {
+    margin-right: 0; /* Remove right margin to stack charts vertically */
+    margin-bottom: 20px; /* Add space between stacked charts */
+  }
+}
+
+.header-container,
+.footer-container {
+  width: 100%;
+  max-width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: #4d8f8f;
+}
+
+.footer-container {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.header {
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+}
+
+.footer{
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+}

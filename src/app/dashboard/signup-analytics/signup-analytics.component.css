@@ -1,0 +1,61 @@
+
+
+.charts-row {
+  display: flex;
+  flex-direction: column;
+}
+
+.chart {
+  flex: 1;
+  margin-top: 80px;
+}
+
+.chart1 {
+  flex: 1;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+
+.header-container,
+.footer-container {
+  width: 100%;
+  max-width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: #4d8f8f;
+}
+
+.header-container{
+  position: fixed;
+}
+
+.footer-container {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.header {
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+}
+
+.footer{
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+}
+

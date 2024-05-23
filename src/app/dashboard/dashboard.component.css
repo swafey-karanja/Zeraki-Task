@@ -1,11 +1,11 @@
 /* dashboard.component.css */
-html, body {
+/* html, body {
   margin: 0;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-}
+} */
 
 .header-container,
 .footer-container {
@@ -153,4 +153,6 @@ html, body {
   z-index: 1;
   opacity: 1;
 }
+
+
 

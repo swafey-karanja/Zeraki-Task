@@ -1,0 +1,133 @@
+{
+  "schools": [
+    {
+      "id": 1,
+      "name": "ABC Primary School",
+      "type": "Primary",
+      "product": "ABC Educational Software",
+      "county": "Nairobi",
+      "registrationDate": "2022-01-15",
+      "contactInfo": {
+        "email": "info@abcprimaryschool.com",
+        "phone": "+1234567890",
+        "address": "123 Main Street, Nairobi"
+      }
+    },
+    {
+      "id": 2,
+      "name": "XYZ Secondary School",
+      "type": "Secondary",
+      "product": "XYZ Learning Management System",
+      "county": "Mombasa",
+      "registrationDate": "2021-09-20",
+      "contactInfo": {
+        "email": "info@xyzsecondaryschool.com",
+        "phone": "+9876543210",
+        "address": "456 Beach Road, Mombasa"
+      }
+    },
+    {
+      "id": 3,
+      "name": "IGCSE Academy",
+      "type": "IGCSE",
+      "product": "IGCSE Curriculum",
+      "county": "Eldoret",
+      "registrationDate": "2020-05-10",
+      "contactInfo": {
+        "email": "info@igcseacademy.com",
+        "phone": "+2468101214",
+        "address": "789 Hillside Avenue, Eldoret"
+      }
+    },
+    {
+      "id": 4,
+      "name": "Sunshine High School",
+      "type": "Secondary",
+      "product": "Sunshine Learning Platform",
+      "county": "Nakuru",
+      "registrationDate": "2021-11-05",
+      "contactInfo": {
+        "email": "info@sunshinehighschool.com",
+        "phone": "+1357924680",
+        "address": "321 Sunrise Boulevard, Nakuru"
+      }
+    },
+    {
+      "id": 5,
+      "name": "Greenfield Academy",
+      "type": "Primary",
+      "product": "Greenfield Education System",
+      "county": "Kisumu",
+      "registrationDate": "2020-08-12",
+      "contactInfo": {
+        "email": "info@greenfieldacademy.com",
+        "phone": "+2468013579",
+        "address": "456 Meadow Lane, Kisumu"
+      }
+    }
+  ],
+  "invoices": [
+    {
+      "id": 1,
+      "schoolId": 1,
+      "amount": 5000,
+      "date": "2023-04-01"
+    },
+    {
+      "id": 2,
+      "schoolId": 2,
+      "amount": 7500,
+      "date": "2023-03-15"
+    },
+    {
+      "id": 3,
+      "schoolId": 3,
+      "amount": 8000,
+      "date": "2023-02-28"
+    },
+    {
+      "id": 4,
+      "schoolId": 4,
+      "amount": 6500,
+      "date": "2023-05-01"
+    },
+    {
+      "id": 5,
+      "schoolId": 5,
+      "amount": 4000,
+      "date": "2023-04-15"
+    }
+  ],
+  "collections": [
+    {
+      "id": 1,
+      "schoolId": 1,
+      "amount": 4000,
+      "date": "2023-04-10"
+    },
+    {
+      "id": 2,
+      "schoolId": 2,
+      "amount": 6000,
+      "date": "2023-03-20"
+    },
+    {
+      "id": 3,
+      "schoolId": 3,
+      "amount": 7000,
+      "date": "2023-03-05"
+    },
+    {
+      "id": 4,
+      "schoolId": 4,
+      "amount": 5500,
+      "date": "2023-05-10"
+    },
+    {
+      "id": 5,
+      "schoolId": 5,
+      "amount": 3500,
+      "date": "2023-04-20"
+    }
+  ]
+}

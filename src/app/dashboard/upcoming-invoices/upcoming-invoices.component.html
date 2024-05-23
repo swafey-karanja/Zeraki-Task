@@ -1,0 +1,27 @@
+<!-- upcoming-invoices.component.ts -->
+<div class="invoice-list">
+  <h2>Upcoming Invoices</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>School</th>
+        <th>Amount</th>
+        <th>Due Date</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let invoice of upcomingInvoices | orderBy: 'dueDate'">
+        <td>{{ invoice.school }}</td>
+        <td>{{ invoice.amount | currency }}</td>
+        <td>{{ invoice.dueDate | date }}</td>
+        <td><button (click)="openPaymentModal(invoice)">Collect Payment</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<app-payment-modal
+  [selectedInvoice]="selectedInvoice"
+  (paymentCollected)="handlePaymentCollected($event)">
+</app-payment-modal>

@@ -1,11 +1,14 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
+import { BrowserModule, bootstrapApplication, provideClientHydration } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { provideCharts, withDefaultRegisterables } from 'ng2-charts';
 import { BaseChartDirective   } from 'ng2-charts';
+import { OrderByPipe } from './dashboard/upcoming-invoices/order-by.pipe';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
@@ -15,27 +18,29 @@ import { MatSidenavModule } from '@angular/material/sidenav'; // Import MatSiden
 import { MatListModule } from '@angular/material/list'; // Import MatListModule
 import { MatIconModule } from '@angular/material/icon';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { PiechartComponent } from './targets-visualization/targets-visualization.component';
-import { FinanceVisualComponent } from './finance-visual/finance-visual.component';
-import { TimetableVisualComponent } from './timetable-visual/timetable-visual.component';
-import { SignupAnalyticsComponent } from './signup-analytics/signup-analytics.component';
-import { SignupFinancesComponent } from './signup-finances/signup-finances.component';
-import { SignupTimelinesComponent } from './signup-timelines/signup-timelines.component';
+import { PiechartComponent } from './dashboard/targets-visualization/targets-visualization.component';
+import { SignupAnalyticsComponent } from './dashboard/signup-analytics/signup-analytics.component';
+import { UpcomingInvoicesComponent } from './dashboard/upcoming-invoices/upcoming-invoices.component';
+import { PaymentModalComponent } from './dashboard/upcoming-invoices/payment-modal/payment-modal.component';
+import { SchoolListComponent } from './School-management/school-list/school-list.component';
+import { SchoolDetailsComponent } from './School-management/school-details/school-details.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
+
     DashboardComponent,
     PiechartComponent,
-    FinanceVisualComponent,
-    TimetableVisualComponent,
     SignupAnalyticsComponent,
-    SignupFinancesComponent,
-    SignupTimelinesComponent,
+    UpcomingInvoicesComponent,
+    OrderByPipe,
+    PaymentModalComponent,
+    SchoolListComponent,
+    SchoolDetailsComponent,
 
   ],
   imports: [
+    AppComponent,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule, // Add BrowserAnimationsModule
@@ -43,14 +48,21 @@ import { SignupTimelinesComponent } from './signup-timelines/signup-timelines.co
     MatSidenavModule,
     MatListModule,
     MatIconModule,
+    RouterModule.forRoot([]),
+    BaseChartDirective,
+    FormsModule,
     RouterModule,
-    BaseChartDirective
+    HttpClientModule
   ],
   providers: [
     provideClientHydration(),
     provideAnimationsAsync(),
     provideCharts(withDefaultRegisterables())
   ],
-  bootstrap: [AppComponent]
+ 
 })
-export class AppModule { }
+export class AppModule {
+  ngDoBootstrap() {
+    bootstrapApplication(AppComponent);
+  }
+ }

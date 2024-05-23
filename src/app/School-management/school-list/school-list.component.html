@@ -1,0 +1,27 @@
+<div>
+  <h2>School List</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Product</th>
+        <th>County</th>
+        <th>Registration Date</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let school of schools">
+        <td>{{ school.name }}</td>
+        <td>{{ school.type }}</td>
+        <td>{{ school.product }}</td>
+        <td>{{ school.county }}</td>
+        <td>{{ school.registrationDate }}</td>
+        <td>
+          <button [routerLink]="['/schools', school.id]">View Details</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

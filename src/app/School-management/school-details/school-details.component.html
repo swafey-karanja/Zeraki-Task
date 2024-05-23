@@ -1,0 +1,57 @@
+<div *ngIf="school; else loading">
+  <h2>School Details</h2>
+  <div>
+    <h3>School Information</h3>
+    <p>Name: {{ school.name }}</p>
+    <p>Type: {{ school.type }}</p>
+    <p>Product: {{ school.product }}</p>
+    <p>County: {{ school.county }}</p>
+    <p>Registration Date: {{ school.registrationDate }}</p>
+    <p>Contact Info: {{ school.contactInfo.email }} | {{ school.contactInfo.phone }}</p>
+    <p>School Balance: {{ schoolBalance }}</p>
+  </div>
+
+  <div>
+    <h3>Invoices</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Amount</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let invoice of invoices">
+          <td>{{ invoice.id }}</td>
+          <td>{{ invoice.amount }}</td>
+          <td>{{ invoice.date }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div>
+    <h3>Collections</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Amount</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let collection of collections">
+          <td>{{ collection.id }}</td>
+          <td>{{ collection.amount }}</td>
+          <td>{{ collection.date }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<ng-template #loading>
+  <p>Loading...</p>
+</ng-template>
